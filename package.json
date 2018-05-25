@@ -1,0 +1,15 @@
+{
+  "name": "iai-csp",
+  "version": "1.0.0",
+  "description": "backend services",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Satish",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^3.1.0-beta4"
+  }
+}
