@@ -33,5 +33,33 @@ initMongoClient.prototype.insertProduct = function(requestBody,callback){
     });
 };
 
+initMongoClient.prototype.findProduct = function(requestBody,callback){
+    console.log("mongoClient.js >> Came into getProduct");
+    myCollection.findOne(requestBody,function(error,result){
+
+        if(error){
+            callback("error occured")
+            return;
+        }
+
+        callback(null,result);
+
+    });
+};
+
+initMongoClient.prototype.findAll = function(requestBody,callback){
+    console.log("mongoClient.js >> Came into findAll");
+    myCollection.find(requestBody).toArray(function(error,result){
+
+        if(error){
+            callback("error occured")
+            return;
+        }
+
+        callback(null,result);
+
+    });
+};
+
 
 module.exports = new initMongoClient();
